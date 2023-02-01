@@ -14,9 +14,7 @@ import java.util.Scanner;
  */
 public class StudentList {
     
-    ArrayList<Student> stArray = new ArrayList<Student>();
-    //mảng chứa sinh viên
-    
+    ArrayList<Student> stArray = new ArrayList<Student>(); //mảng chứa sinh viên
     public StudentList()
     {
         
