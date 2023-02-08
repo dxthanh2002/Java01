@@ -14,7 +14,7 @@ import java.util.TreeMap;
 public class Tudien {
     TreeMap<String,String> td ;//key lưu tiếng Anh, value lưu tiếng Việt
     public Tudien(){
-        td = new TreeMap<String,String>();
+        td = new TreeMap<>();
     }
     public boolean ThemTu(String ta, String tv){
         if(ta.equals("") || tv.equals("")){
