@@ -4,32 +4,35 @@
  */
 package Exam;
 
-/**
- *
- * @author Giang8692
- */
+import java.util.Scanner;
+
 public class ComplexDemo {
-  public static void main(String[] args) {
-    Complex c1 = new Complex(3, 4);
-    Complex c2 = new Complex(5, 6);
-    
-    System.out.println("Complex number 1: " + c1);
-    System.out.println("Complex number 2: " + c2);
-    
-    Complex sum = c1.add(c2);
-    System.out.println("Sum of complex numbers: " + sum);
-    
-    Complex difference = c1.subtract(c2);
-    System.out.println("Difference of complex numbers: " + difference);
-    
-    Complex product = c1.multiply(c2);
-    System.out.println("Product of complex numbers: " + product);
-    
-    Complex quotient = c1.divide(c2);
-    System.out.println("Quotient of complex numbers: " + quotient);
-    
-    c1.setRealPart(10);
-    c1.setImaginaryPart(20);
-    System.out.println("Complex number 1 after modification: " + c1);
-  }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Complex c1 = new Complex();
+        Complex c2 = new Complex();
+        c1.nhap(sc);
+        c2.nhap(sc);
+        System.out.println("Số phức thứ 1: " + c1);
+        System.out.println("Số phức thứ 2: " + c2);
+
+        Complex tong = c1.add(c2);
+        System.out.print("tong hai so phuc:");
+        tong.hienthi();
+
+        Complex hieu = c1.subtract(c2);
+        System.out.print("hiệu hai số phức:");
+        hieu.hienthi();
+
+        Complex tich = c1.multiply(c2);
+        System.out.print("tích hai số phức:");
+        tich.hienthi();
+
+        Complex thuong = c1.divide(c2);
+        System.out.print("thương hai số phức:");
+        thuong.hienthi();
+
+    }
 }

@@ -75,7 +75,7 @@ public class Complex {
   
   // method to display the complex number in the format "a + bi"
   public String toString() {
-    return this.realPart + " + " + this.imaginaryPart + "i";
+    return (int)this.realPart+","+(int)this.imaginaryPart;
   }
 }
 
