@@ -69,9 +69,15 @@ public class Student {
         System.out.print("Nhap Lastname:") ;
         Lastname = nhap.nextLine();
         System.out.print("Nhap tuoi:") ;
-        age = nhap.nextInt();
-        System.out.print("Nhap diem:") ;
-        score = nhap.nextInt();
+        Age = nhap.nextInt();
+        
     }
+
+    @Override
+    public String toString() {
+        return "Student{" + "ErollID=" + ErollID + ", FirstName=" + FirstName + ", Lastname=" + Lastname + ", Age=" + Age + '}';
+    }
+   
     
+   
 }
