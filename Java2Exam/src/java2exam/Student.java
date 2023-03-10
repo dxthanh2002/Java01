@@ -4,34 +4,31 @@
  */
 package java2exam;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-/**
- *
- * @author admin
- */
-public class Student {
-    public String ErollID;
+public class Student implements Serializable{
+    public String EnrolID;
     public String FirstName;
-    public String Lastname;
+    public String LastName;
     public int Age;
 
     public Student() {
     }
 
-    public Student(String ErollID, String FirstName, String Lastname, int Age) {
-        this.ErollID = ErollID;
+    public Student(String EnrolID, String FirstName, String LastName, int Age) {
+        this.EnrolID = EnrolID;
         this.FirstName = FirstName;
-        this.Lastname = Lastname;
+        this.LastName = LastName;
         this.Age = Age;
     }
 
-    public String getErollID() {
-        return ErollID;
+    public String getEnrolID() {
+        return EnrolID;
     }
 
-    public void setErollID(String ErollID) {
-        this.ErollID = ErollID;
+    public void setEnrolID(String EnrolID) {
+        this.EnrolID = EnrolID;
     }
 
     public String getFirstName() {
@@ -42,12 +39,12 @@ public class Student {
         this.FirstName = FirstName;
     }
 
-    public String getLastname() {
-        return Lastname;
+    public String getLastName() {
+        return LastName;
     }
 
-    public void setLastname(String Lastname) {
-        this.Lastname = Lastname;
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
     }
 
     public int getAge() {
@@ -58,26 +55,21 @@ public class Student {
         this.Age = Age;
     }
     
-    
-   public void add()
-    {
-        Scanner nhap = new Scanner(System.in);
-        System.out.print("Nhap ErollID:") ;
-        ErollID = nhap.nextLine();
-        System.out.print("Nhap ma FirstName:") ;
-        FirstName = nhap.nextLine();
-        System.out.print("Nhap Lastname:") ;
-        Lastname = nhap.nextLine();
-        System.out.print("Nhap tuoi:") ;
-        Age = nhap.nextInt();
-        
+    public void Input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap EnrollID: ");
+        EnrolID = sc.nextLine();
+        System.out.println("Nhap FirstName ");
+        FirstName = sc.nextLine();
+        System.out.println("Nhap LastName");
+        LastName = sc.nextLine();
+        System.out.println("Nhap tuoi");
+        Age = sc.nextInt();
     }
-
+    
     @Override
     public String toString() {
-        return "Student{" + "ErollID=" + ErollID + ", FirstName=" + FirstName + ", Lastname=" + Lastname + ", Age=" + Age + '}';
+        return EnrolID + "      " + FirstName + " " + LastName + "      " + Age;
     }
-   
     
-   
 }
