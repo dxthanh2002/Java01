@@ -26,7 +26,7 @@ public class MainAddress {
                 chon = nhap.nextInt();
                 return chon;
             } catch (java.util.InputMismatchException e) {
-                System.out.println("Bạn nhập sai");
+                System.out.println("Wrong input!");
                 System.out.println(e.getMessage());
                 continue;
             }
@@ -43,27 +43,27 @@ public class MainAddress {
             chon = Menu();
             switch (chon) {
                 case 1:
-                    System.out.println("Enter new name:");
-                    ten = nhap.nextLine();
                     System.out.println("Enter new number:");
                     so = nhap.nextLine();
-                    b = db.ThemSo(ten, so);
+                    System.out.println("Enter new name:");
+                    ten = nhap.nextLine();
+                    b = db.ThemSo(so, ten);
                     if (!b) {
-                        System.out.println("Lỗi thêm tên");
+                        System.out.println("forget or duplicated number");
                     }
                     break;
                 case 2:
-                    System.out.println("Thông tin danh bạ:");
+                    System.out.println("My reaction to that infomation:");
                     db.Hienthi();
                     break;
                 case 3:
-                    System.out.println("Tên người:");
-                    ten = nhap.nextLine();
-                    so = db.Tratu(ten);
+                    System.out.println("Number:");
+                    so = nhap.nextLine();
+                    ten = db.Tratu(so);
                     if (so.equals("")) {
-                        System.out.println("Chưa có tên '" + ten + "'");
+                        System.out.println("Not found '" + so + "'");
                     } else {
-                        System.out.println("Tên danh bạ có số " + so);
+                        System.out.println("This number has a name " + ten);
                     }
                     break;
                 case 4:

@@ -17,29 +17,30 @@ public class Contact {
         db = new HashMap();
     }
     
-    public boolean ThemSo(String ten, String so){
+    public boolean ThemSo(String so, String ten){
         if(ten.equals("") || so.equals("")){
             return false;
         }
-        if(db.containsValue(so)){//nếu từ tiếng anh đã có
+        if(db.containsValue(so)){
             return false;
         }
-        db.put(ten, so);
+        db.put(so, ten);
         return true;
     }
     public void Hienthi(){
-        for(String ten:db.keySet())
+        System.out.println("Contact name       Phone Number");
+        for(String so:db.keySet())
         {
-            String so = db.get(ten);
-            System.out.println(ten + ":" + so);
+            String ten = db.get(so);
+            System.out.println(ten + " :                " + so);
         }
     }
-    public String Tratu(String ten){
-        if(db.containsKey(ten)==false || db.isEmpty())
+    public String Tratu(String so){
+        if(db.containsKey(so)==false || db.isEmpty())
         {
             return "";
         }
-        return db.get(ten);
+        return db.get(so);
     }
 
     public boolean Xoa(String ten){
