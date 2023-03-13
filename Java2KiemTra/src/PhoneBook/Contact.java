@@ -34,20 +34,14 @@ public class Contact {
             System.out.println(ten + ":" + so);
         }
     }
-    public String Tratu(String ten){//trả về từ tiếng Việt nếu có, không thì trả về rỗng
+    public String Tratu(String ten){
         if(db.containsKey(ten)==false || db.isEmpty())
         {
             return "";
         }
         return db.get(ten);
     }
-    public boolean Sua(String ten, String so){
-        if(db.containsKey(ten)){//Nếu từ tiếng Anh đã tồn tại
-            db.put(ten, so);//thêm ta vào cột key trùng với key đã có thì value sẽ được ghi đè (tiếng Việt)
-            return true;
-        }
-        return false;
-    }
+
     public boolean Xoa(String ten){
         if(db.containsKey(ten)){
             
