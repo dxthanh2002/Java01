@@ -60,8 +60,8 @@ public class MainAddress {
                     System.out.println("Number:");
                     so = nhap.nextLine();
                     ten = db.Tratu(so);
-                    if (so.equals("")) {
-                        System.out.println("Not found '" + so + "'");
+                    if (ten.equals("")) {
+                        System.out.println("Not found number '" + so + "'");
                     } else {
                         System.out.println("This number has a name " + ten);
                     }
