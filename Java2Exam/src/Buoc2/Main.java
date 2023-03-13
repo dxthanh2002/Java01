@@ -1,15 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package java2exam;
+package Buoc2;
 
 
 import java.util.Scanner;
 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
 /**
  *
- * @author admin
+ * @author Admin
  */
 public class Main {
     public static int inputInt()
@@ -57,10 +58,19 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Save to Student.dat");
+                    boolean b1 = stm.SaveToFile("Student.dat");
+                    if(b1==true)
+                        System.out.println("Save Successfull!");
+                    else
+                        System.out.println("Save Fail!");
                     break;
                 case 3:
                     System.out.println("Display all Students");
-                    stm.DisplayList();
+                    boolean b2 = stm.LoadFromFile("Student.dat");
+                    if(b2==true)
+                        stm.DisplayList();
+                    else
+                        System.out.println("Fail to Load data!");
                     break;
                 case 4:
                     System.out.println("Good Bye!");
