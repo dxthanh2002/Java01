@@ -7,6 +7,7 @@ package Forms;
 
 import CSDL.tbLophoc;
 import Models.clsLophoc;
+import java.util.Iterator;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -35,9 +36,8 @@ public class frmQuanlyLophoc extends javax.swing.JFrame {
         if(dslop.size()>0){
             DefaultTableModel dtm = (DefaultTableModel)tblLophoc.getModel();
             dtm.setRowCount(0);//xóa các dòng cũ nếu có
-            for(clsLophoc lop : dslop)
-            {
-             dtm.addRow(new Object[]{lop.getMalop(),lop.getTenlop()});
+            for (clsLophoc lop : dslop) {
+                dtm.addRow(new Object[]{lop.getMalop(),lop.getTenlop()});
             }
         }
     }
